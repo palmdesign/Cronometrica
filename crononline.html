@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cronometrica | definição & história</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagens/crono_icon.svg" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body class="home">
+
+    <header id="main-header">
+
+        <div class="logo-link">
+            <a href="index.html" class="logo">
+                <img src="imagens/crono_logo.svg" alt="logo cronometrica" /></a>
+        </div>
+
+    </header>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <hr class="hr1">
+                <li><a href="defhis.html">DEFINIÇÃO & HISTÓRIA</a></li>
+                <hr class="hr2">
+                <li><a href="indusdesp.html">NA INDÚSTRIA E NO DESPORTO</a></li>
+                <hr class="hr3">
+                <li><a href="crononline.html">CRONÓMETRO ONLINE</a></li>
+                <hr class="hr4">
+                <li><a href="form.html">DEIXE A SUA OPINIÃO</a></li>
+                <hr class="hr5">
+            </ul>
+        </nav>
+    </div>
+
+    <section id="showcase">
+        <h2>CRONÓMETRO ONLINE</h2>
+        <br>
+        <div class="cronoline">
+            <style type="text/css">
+                html,
+                td {
+                    font-family: helvetica, arial;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+
+                h1.header {
+                    font-size: 2px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+
+                a.sizeLink,
+                .sizeLink {
+                    font-family: helvetica, arial;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                }
+
+                #main button,
+                #splitbutton,
+                #startstopbutton,
+                #resetbutton,
+                #split {
+                    font-size: 40px;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+
+                #disp {
+                    font-size: 84px;
+                    vertical-align: middle;
+                    text-align: center;
+
+                    color: black;
+                    font-weight: 900;
+                    border: 0px none;
+                }
+
+                .qmmc .qmdivider {
+                    display: block;
+                    font-size: 1px;
+                    border-width: 0px;
+                    border-style: solid;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .qmmc .qmdividery {
+                    float: left;
+                    width: 0px;
+                }
+
+                .qmmc .qmtitle {
+                    display: block;
+                    cursor: default;
+                    white-space: nowrap;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .qmclear {
+                    font-size: 1px;
+                    height: 0px;
+                    width: 0px;
+                    clear: left;
+                    line-height: 0px;
+                    display: block;
+                    float: none !important;
+                }
+
+                .qmmc {
+                    position: relative;
+                    zoom: 1;
+                    z-index: 10;
+                }
+
+                .qmmc a,
+                .qmmc li {
+                    float: left;
+                    display: block;
+                    white-space: nowrap;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .qmmc div a,
+                .qmmc ul a,
+                .qmmc ul li {
+                    float: none;
+                }
+
+                .qmsh div a {
+                    float: left;
+                }
+
+                .qmmc div {
+                    visibility: hidden;
+                    position: absolute;
+                }
+
+                .qmmc .qmcbox {
+                    cursor: default;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .qmmc .qmcbox a {
+                    display: inline;
+                }
+
+                .qmmc .qmcbox div {
+                    float: none;
+                    position: static;
+                    visibility: inherit;
+                    left: auto;
+                }
+
+                #qm0 {
+                    width: auto;
+                }
+
+                #qm0 a {
+                    padding: 0px 3px 0px 0px;
+                    background-color: transparent;
+                    color: #FFFFFF;
+                    font-family: helvetica, arial;
+                    font-size: 10px;
+                    text-decoration: underline;
+                    text-align: left;
+                }
+
+                #qm0 div {
+                    padding: 10px;
+                    margin: -1px 0px 0px 0px;
+                    background-color: transparent;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: #222222;
+                }
+
+                #qm0 div a {
+                    padding: 3px 20px 3px 2px;
+                    margin: 0px;
+                    background-color: transparent;
+                    color: #EEEEEE;
+                    font-family: helvetica, arial;
+                    font-size: 9px;
+                    text-decoration: underline;
+                }
+
+                #qm0 div a:hover {
+                    color: #FFFFFF;
+                    text-decoration: underline;
+                }
+
+                #qm0 div a:hover {
+                    color: #FFFFFF;
+                    text-decoration: underline;
+                }
+
+                #qm0 div .qmparent {}
+
+                body #qm0 div .qmactive,
+                body #qm0 div .qmactive:hover {
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    text-decoration: underline;
+                }
+
+                #qm0 .qmtitle {
+                    margin: 2px 0px 5px 0px;
+
+                    font-family: helvetica, arial;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+
+                #qm0 .qmdividerx {
+                    border-top-width: 1px;
+                    margin: 4px 0px 4px 0px;
+                    border-color: white;
+                }
+
+                ul#qm0 a img {
+                    display: block;
+                    border-style: none;
+                }
+
+                ul#qm0 ul li:hover>a.qmparent {
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    text-decoration: underline;
+                }
+            </style>
+            <script src="./Online Stopwatch - OnlineClock.net_files/stopwatch-v7.js.transferir"
+                type="text/javascript"></script>
+            <style></style>
+            </head>
+
+            <body onload="removeUnderline(2);removeUnderline2(5);load();" bgcolor="#000000" text="#666666" id="theBody">
+
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td width="50%" valign="top">
+                                <div id="qm0" class="qmmc" style="z-index: 11; float: left; zoom: 1;">
+
+                                </div>&nbsp;&nbsp;
+
+
+                                <script
+                                    type="text/javascript">qm_create(0, false, 0, 500, false, false, false, false, false);</script>
+                                <a href="javascript:void(0);" onclick="changeFontSize(28);removeUnderline(0);"
+                                    class="sizeLink" title="Small" id="lsmall"
+                                    style="text-decoration: underline; font-weight: bold;">Small</a>
+                                | <a href="javascript:void(0);" onclick="changeFontSize(56);removeUnderline(1);"
+                                    class="sizeLink" title="Medium" id="lmedium"
+                                    style="text-decoration: underline; font-weight: bold;">Medium</a>
+                                | <a href="javascript:void(0);" onclick="changeFontSize(84);removeUnderline(2);"
+                                    class="sizeLink" title="Large" id="llarge"
+                                    style="text-decoration: none; font-weight: normal;">Large</a>
+                                | <a href="javascript:void(0);" onclick="changeFontSize(150);removeUnderline(3);"
+                                    class="sizeLink" title="X-Large" id="lxlarge"
+                                    style="text-decoration: underline; font-weight: bold;">X-Large</a>
+                            </td>
+                            <td width="50%" align="right" valign="top">
+                                <a href="javascript:void(0);"
+                                    onclick="changeBackground(&#39;blue&#39;);removeUnderline2(4);" class="sizeLink"
+                                    title="Blue" id="lblue"
+                                    style="text-decoration: underline; font-weight: bold;">Blue</a>
+                                | <a href="javascript:void(0);"
+                                    onclick="changeBackground(&#39;black&#39;);removeUnderline2(5);" class="sizeLink"
+                                    title="Black" id="lblack"
+                                    style="text-decoration: none; font-weight: normal;">Black</a>
+                                | <a href="javascript:void(0);"
+                                    onclick="changeBackground(&#39;silver&#39;);removeUnderline2(6);" class="sizeLink"
+                                    title="Silver" id="lsilver"
+                                    style="text-decoration: underline; font-weight: bold;">Silver</a>
+                                | <a href="javascript:void(0);"
+                                    onclick="changeBackground(&#39;#006400&#39;);removeUnderline2(7);" class="sizeLink"
+                                    title="Green" id="lgreen"
+                                    style="text-decoration: underline; font-weight: bold;">Green</a>
+                                | <a href="javascript:void(0);"
+                                    onclick="changeBackground(&#39;orange&#39;);removeUnderline2(8);" class="sizeLink"
+                                    title="Orange" id="lorange"
+                                    style="text-decoration: underline; font-weight: bold;">Orange</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table align="center" width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="top" width="100%" height="100%">
+                                <br><br><br><br><br>
+
+                                <div id="main" style="margin-top:4px;">
+                                    <form name="stopwatch" id="stopwatch" style="margin-top:0px;margin-bottom:0px;"
+                                        action="https://stopwatch.onlineclock.net/" method="post">
+                                        <input type="button" name="disp" id="disp" value="00:00:02.000">
+                                        <br><br>
+                                        <input type="button" onclick="stopstart()" onfocus="this.blur()"
+                                            name="startstopbutton" id="startstopbutton" title="Start / Stop"
+                                            value="Start">&nbsp;<input type="button" onclick="dosplit()"
+                                            onfocus="this.blur()" name="splitbutton" id="splitbutton" title="Split"
+                                            value="Split">&nbsp;<input type="button" onclick="reset_it()"
+                                            onfocus="this.blur()" name="resetbutton" id="resetbutton" title="Reset"
+                                            value="Reset">
+                                    </form>
+                                </div>
+                                <div id="split">1 Stop: 00:00:02.000<br></div><br>
+                                <div id="csv-download">
+                                    <font style="color:red;font-weight:bold;">New! </font><a
+                                        href="javascript:downloadCSV();" class="sizeLink"
+                                        title="Download your times in a Comma-Separated Values File!">Download
+                                        .CSV</a>
+                                </div>
+
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <script type="text/javascript">
+
+                    function toggleVis() {
+                        var midNavBlock = document.getElementById("midNav");
+                        var aHideShow = document.getElementById('linkHideShow');
+
+                        if (midNavBlock.style.display === "none") {
+                            midNavBlock.style.display = "block";
+                            //aHideShow.innerText = "--";
+                            aHideShow.innerHTML = "<img src=\"//onlineclock.net/images/hide-icon20.png\" width=\"20\" height=\"20\" border=\"0\" alt=\"Hide/Show Navigation\">";
+                            aHideShow.title = "Hide Navigation";
+                        } else {
+                            midNavBlock.style.display = "none";
+                            //aHideShow.innerText = "+";
+                            aHideShow.innerHTML = "<img src=\"//onlineclock.net/images/show-icon20.png\" width=\"20\" height=\"20\" border=\"0\" alt=\"Hide/Show Navigation\">";
+                            aHideShow.title = "Show Navigation";
+                        }
+                    }
+
+                </script>
+
+                <script>
+                    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                    ga('create', 'UA-477189-6', 'auto');
+                    ga('set', 'anonymizeIp', true);
+                    ga('send', 'pageview');
+                </script>
+                <script async="" src="./Online Stopwatch - OnlineClock.net_files/analytics.js.transferir"></script>
+
+
+                </script>
+                <link rel="stylesheet" type="text/css"
+                    href="./Online Stopwatch - OnlineClock.net_files/cookieconsent.min.css">
+                <script src="./Online Stopwatch - OnlineClock.net_files/cookieconsent.min.js.transferir"></script>
+                <script>
+                    window.addEventListener("load", function () {
+                        window.cookieconsent.initialise({
+                            "palette": {
+                                "popup": {
+                                    "background": "#000000",
+                                    "text": "#666666"
+                                },
+                                "button": {
+                                    "background": "#ff0000",
+                                    "text": "#000000"
+                                }
+                            },
+                            "position": "bottom",
+                            "theme": "classic",
+                            "position": "bottom",
+                            "cookie": {
+                                "domain": ".onlineclock.net"
+                            },
+                            "content": {
+                                "href": "//onlineclock.net/about/privacy.html#privacy"
+                            }
+                </script>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <section id="social-boxes">
+        <div class="block"><a href="https://www.facebook.com" class="socialnet-logo">
+                <img src="Imagens/face_logo.svg" alt="Facebook" /></a></div>
+
+        <div class="block"><a href="https://plus.google.com/" class="socialnet-logo">
+                <img src="Imagens/googl_logo.svg" alt="Google+" /></a></div>
+
+        <div class="block"><a href="https://www.twitter.com" class="socialnet-logo">
+                <img src="Imagens/twit_logo.svg" alt="Twitter" /></a></div>
+
+        <div class="block"><a href="https://www.instagram.com" class="socialnet-logo">
+                <img src="Imagens/insta_logo.svg" alt="Instagram" /></a></div>
+    </section>
+    <footer id="main-footer">
+        <p>2018 &copy; <strong> Cronometrica</strong> | All rights reserved | <em>Powered by</em> <strong><em>palm
+                    design</em></strong></p>
+    </footer>
+</body>
+
+</html>
