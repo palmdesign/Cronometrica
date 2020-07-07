@@ -32,7 +32,10 @@
   padding-bottom: 1%;
  }
 
-.logo a{display: block;}
+ 
+.logo a{display: block;
+
+}
 .logo img{min-width: 350px;
 max-width: 50%;
 }
@@ -469,13 +472,14 @@ h1{font-family:'Century Gothic Bold Italic','Muli', sans-serif;
                       max-width: 100%;}
                     .fotos-txt2 img{padding-top: 2%;
                       max-width: 100%;}
-                      section#showcase h2 {
-    margin: 0;
-   max-width: 380px;
-    text-align: center;
+
+ section#showcase h2 {
+  margin: 0;
+  max-width: 380px;
+  text-align: center;
   float: center;
   padding: 0;
-  padding-top: 8% !important;
+  padding-top: 4% !important;
   padding-bottom: 4% !important;
   background: rgba(255,255,255,0.70);
 }
@@ -487,6 +491,8 @@ input#disp {
   font-weight: 600 !important;
   border: 0px none;
 }
+
+
 
 }
 
