@@ -284,13 +284,19 @@ text-align: center;
   .logo-link {
     padding-left: 1.5%;
 }
-
-#showcase {
+div#csv-download{
+  padding-top: 4% !important;
+  vertical-align: middle !important;
+  text-align: center;
+}
+section#showcase h2 {
     margin: 0;
    max-width: 380px;
     text-align: center;
   float: center;
   padding: 0;
+  padding-top: 8% !important;
+  padding-bottom: 4% !important;
   background: rgba(255,255,255,0.70);
 }
 input#disp {
@@ -463,6 +469,24 @@ h1{font-family:'Century Gothic Bold Italic','Muli', sans-serif;
                       max-width: 100%;}
                     .fotos-txt2 img{padding-top: 2%;
                       max-width: 100%;}
+                      section#showcase h2 {
+    margin: 0;
+   max-width: 380px;
+    text-align: center;
+  float: center;
+  padding: 0;
+  padding-top: 8% !important;
+  padding-bottom: 4% !important;
+  background: rgba(255,255,255,0.70);
+}
+input#disp {
+  font-size: 56px !important;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  font-weight: 600 !important;
+  border: 0px none;
+}
 
 }
 
